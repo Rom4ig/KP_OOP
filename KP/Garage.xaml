@@ -1,0 +1,46 @@
+﻿<Page x:Class="KP.Garage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KP"
+      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Garage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="44*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="302*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid MouseDoubleClick="List_Cars_MouseDoubleClick" SelectionMode="Single" IsReadOnly="True" AutoGeneratingColumn="OnAutoGeneratingColumn" Name="List_Cars" ToolTip="Двойное нажатие открывает картинку" Grid.RowSpan="10"></DataGrid>
+        <Button Content="Выйти" ToolTip="Сменить имя пользователя" Grid.Column="2" Grid.Row="9" Click="Button_Click"/>
+        <Label Name="user_name" Background="LightGray" ToolTip="Ваше имя"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="2"  Grid.Row="1"/>
+        <Label Name="balance" Background="LightGray" ToolTip="Ваш баланс" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="2"  Grid.Row="2"/>
+        <Button Name="Cars" Content="В автосалон" ToolTip="Перейти в автосалон" Grid.Column="2"  Grid.Row="6" Click="Cars_Click"/>
+        <Button Name="Sell" Content="Продать на авторынок" ToolTip="Быстро продать авто" Grid.Column="2"  Grid.Row="8" Click="Sell_Click"/>
+        <Button Name="Add_Money" Content="Пополнить баланс" ToolTip="Пополнение баланса" Grid.Column="2"  Grid.Row="7" Click="Add_Money_Click"/>
+        <Button Name="ToSell" Content="Продать" ToolTip="Предложить купить выбранное авто пользователю" Grid.Column="2"  Grid.Row="5" Click="ToSell_Click"/>
+        <Controls:Badged Name="Notification" Badge="{Binding Path=BadgeValue}" Grid.Column="2"  Grid.Row="4" >
+            <!-- Control to wrap goes here -->
+            <Button Name="ToDeals" Content="Сделки" ToolTip="Проверяет доступные Вам сделки" Grid.Column="1"  Grid.Row="4" Click="ToDeals_Click"/>
+        </Controls:Badged>
+    </Grid>
+</Page>

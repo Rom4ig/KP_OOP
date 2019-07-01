@@ -1,0 +1,34 @@
+﻿<Page x:Class="KP.Balance"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KP"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Balance">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="129*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Пополнение баланса" FontSize="30" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="1" Height="50"  Width="300"/>
+        <TextBox PreviewTextInput="Card_PreviewTextInput" Name="Card" MaxLength="16" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Height="32" />
+        <Label Content="Введите номер карты"  Grid.Row="1" VerticalAlignment="Center" HorizontalContentAlignment="Right" Height="26"/>
+        <TextBox PreviewTextInput="Money_PreviewTextInput" ToolTip="Только цифры и . ," Name ="Money" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" Height="32"/>
+        <Label Content="Введите сумму"  Grid.Row="3" VerticalAlignment="Center" HorizontalContentAlignment="Right" Height="26"/>
+        <Button IsCancel="True" Name="Back" Content="Назад" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="120" Height="45" Click="Back_Click"/>
+        <Button IsDefault="True" Name="Confirm" Content="Пополнить" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="120" Height="45" Click="Confirm_Click"/>
+        <Image Source="C:\Users\Roman\Desktop\4 семестр\ООП\KP\logo.png"/>
+        <Image Grid.Column="2" Source="C:\Users\Roman\Desktop\4 семестр\ООП\KP\logo.png"/>
+    </Grid>
+</Page>

@@ -1,0 +1,28 @@
+﻿<Page x:Class="KP.Count"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KP"
+        mc:Ignorable="d"
+        Title="Изменения" Height="150" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="53*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Content="Введите количество для выбранного т/с" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBox PreviewTextInput="Counts_PreviewTextInput" Name ="Counts" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2" />
+        <Button Name="BackK" Content="Назад" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Width="76" Click="BackK_Click"/>
+        <Button Name="ChangeC" Content="Изменить" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Width="76" Click="ChangeC_Click"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,23 @@
+﻿<Controls:MetroWindow x:Class="KP.MainWindow"
+                      
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Cars" Height="450" Width="800"
+        Icon="C:\Users\Roman\Desktop\4 семестр\ООП\KP\logo (2).png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="92*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="390*"/>
+            <RowDefinition Height="29*"/>
+        </Grid.RowDefinitions>
+        <Frame Background="LightBlue" x:Name="frame" NavigationUIVisibility="Hidden" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Label Grid.Row="1" Content="v1.0" ToolTip="Первая версия данного приложения. Будет дорабатываться."></Label>
+    </Grid>
+</Controls:MetroWindow>

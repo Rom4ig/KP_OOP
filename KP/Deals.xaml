@@ -1,0 +1,23 @@
+﻿<Page x:Class="KP.Deals"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KP"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Deals">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <DataGrid ToolTip="Двойное нажатие открывает картинку" MouseDoubleClick="List_Deals_MouseDoubleClick" Name="List_Deals" IsReadOnly="True" SelectionMode="Single" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Назад" Name="Back" Width="150"  Click="Back_Click"></Button>
+            <Button Content ="Купить" Name="Buy" Width="150" Click="Buy_Click"/>
+            <Button Content="Отказаться" Name="Cencel" Width="150" Click="Cencel_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
